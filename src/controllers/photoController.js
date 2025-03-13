@@ -10,7 +10,7 @@ exports.uploadPhoto = async (req, res) => {
         res.status(201).json({ message: "Foto subida con éxito", photo: newPhoto
         });
     } catch (error) {
-        res.status(500).json({ error: "Error al subir la foto" });
+        res.status(500).json({ error: error });
     }
 };
 // Obtener todas las fotos de un usuario
